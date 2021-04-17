@@ -21,11 +21,11 @@
 		<div class="container">
             <!-- Output section. -->
             <div class="alert-success alert">
-                <p>Hello Floice Nyoita. Thank you for filling this form. Your birthday will be on a Sunday this year! You are female and you wished for financial stability.</p>
-                <p>List of acceptable gifts: </p>
+                <p>Hello <span id="user"></span>. Thank you for filling this form. Your birthday will be on a <span id="userBDay"></span> this year! You are <span id="userGender"></span> and you wished for <span id="userWish"></span>.</p>
+                <p>List of acceptable gifts: <span id="userGifts"></span></p>
             </div>
             <!-- Form -->
-			<form>
+			<form class="birthday-form">
 				<!-- Username -->
 				<div class="form-group">
 					<label for="userName">Enter your name.</label>
@@ -36,6 +36,7 @@
 						class="form-control"
 						placeholder="Full Name"
 						aria-describedby="helpId"
+                        required
 					/>
 					<small id="helpId" class="text-muted"
 						>Please enter your official name.</small
@@ -51,6 +52,7 @@
 						class="form-control"
 						placeholder=""
 						aria-describedby="helpId"
+                        required
 					/>
 					<small id="helpId" class="text-muted">Your birthday</small>
 				</div>
@@ -59,21 +61,23 @@
 					<label for="gender">Please select your gender.</label>
 					<div class="form-check">
 						<input
-							class="form-check-input"
+							class="gender"
 							type="radio"
 							name="gender"
 							id="male"
+                            value="male"
 						/>
-						<label class="form-check-label" for="male"> Male </label>
+						<label class="gifts" for="male"> Male </label>
 					</div>
 					<div class="form-check">
 						<input
-							class="form-check-input"
+							class="gender"
 							type="radio"
 							name="gender"
 							id="female"
+                            value="female"
 						/>
-						<label class="form-check-label" for="female"> Female </label>
+						<label class="gifts" for="female"> Female </label>
 					</div>
 				</div>
 				<!-- Wish -->
@@ -91,32 +95,32 @@
                 <div class="form-group">
                     <label for="gifts">List of acceptable gifts.</label>
                   <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input" name="gifts" id="car" value="Car">
+                    <label class="gifts">
+                      <input type="checkbox" class="gifts" name="gifts" id="car" value="Car">
                       Car
                     </label>
                   </div>
                   <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input" name="gifts" id="money" value="Money">
+                    <label class="gifts">
+                      <input type="checkbox" class="gifts" name="gifts" id="money" value="Money">
                       Money
                     </label>
                   </div>
                   <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input" name="gifts" id="land" value="Land">
+                    <label class="gifts">
+                      <input type="checkbox" class="gifts" name="gifts" id="land" value="Land">
                       Land
                     </label>
                   </div>
                   <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input" name="gifts" id="phone" value="Phone">
+                    <label class="gifts">
+                      <input type="checkbox" class="gifts" name="gifts" id="phone" value="Phone">
                       Phone
                     </label>
                   </div>
                   <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input" name="gifts" id="house" value="House">
+                    <label class="gifts">
+                      <input type="checkbox" class="gifts" name="gifts" id="house" value="House">
                       House
                     </label>
                   </div>
